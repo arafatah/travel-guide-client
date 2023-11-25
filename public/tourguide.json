@@ -1,0 +1,68 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "img": "https://i.ibb.co/8c4MhMC/christian-buehner-DIt-Ylc26z-VI-unsplash.jpg",
+      "experience": "10+ years",
+      "languages": ["English", "Spanish"],
+      "specialties": ["Historical Tours", "Culinary Experiences"],
+      "description": "Passionate about sharing the rich history and flavors of the places I guide. Join me for an unforgettable journey!",
+      "contact": {
+        "email": "alice@example.com",
+        "phone": "+1 (555) 123-4567"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Carlos Rodriguez",
+      "img": "https://i.ibb.co/PwHqR64/joseph-gonzalez-i-Fg-Rcq-Hznqg-unsplash.jpg",
+      "experience": "8 years",
+      "languages": ["English", "French"],
+      "specialties": ["Adventure Tours", "Wildlife Expeditions"],
+      "description": "Explore the wonders of nature with an experienced guide. I'm dedicated to creating exciting and educational outdoor adventures.",
+      "contact": {
+        "email": "carlos@example.com",
+        "phone": "+1 (555) 987-6543"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Elena Martinez",
+      "img": "https://i.ibb.co/JqYT1J2/nicolas-horn-MTZTGv-Ds-HFY-unsplash.jpg",
+      "experience": "12 years",
+      "languages": ["English", "Italian"],
+      "specialties": ["Art and Culture Tours", "Photography Walks"],
+      "description": "Discover the beauty of art and culture through my guided tours. Capture memories and immerse yourself in the local artistic scene.",
+      "contact": {
+        "email": "elena@example.com",
+        "phone": "+1 (555) 876-5432"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Raj Patel",
+      "img": "https://i.ibb.co/VJD60Wh/jake-nackos-IF9-TK5-Uy-KI-unsplash.jpg",
+      "experience": "15 years",
+      "languages": ["English", "Hindi"],
+      "specialties": ["Cultural Heritage Tours", "Marketplace Explorations"],
+      "description": "Passionate about preserving and sharing cultural heritage. Join me on a journey through time and vibrant marketplaces.",
+      "contact": {
+        "email": "raj@example.com",
+        "phone": "+1 (555) 234-5678"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Maria Silva",
+      "img": "https://i.ibb.co/nRp4tT1/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg",
+      "experience": "7 years",
+      "languages": ["English", "Portuguese"],
+      "specialties": ["Beach Retreats", "Local Festivals"],
+      "description": "Escape to the sun and sea with me. Experience the beauty of coastal landscapes and immerse yourself in local festivities.",
+      "contact": {
+        "email": "maria@example.com",
+        "phone": "+1 (555) 345-6789"
+      }
+    }
+  ]
+  

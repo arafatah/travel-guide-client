@@ -16,10 +16,8 @@ const OurPackages = () => {
     }, []);
   
     const handleAddToWishlist = (id) => {
-      // Find the package with the matching id
       const selectedPackage = packages.find((pack) => pack._id === id);
   
-      // Check if the user is logged in and the selected package exists
       if (user && selectedPackage) {
         const wishlistItem = {
           email: user.email,

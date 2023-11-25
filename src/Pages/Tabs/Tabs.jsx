@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import OurPackages from '../Home/OurPackage/OurPackages';
+import TourGuide from '../TourGuide/TourGuide';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -119,7 +120,7 @@ const Tabs = () => {
             id={`panel-${2}`}
             className="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300"
           >
-            <h2 className="text-xl font-semibold text-gray-800">Second tab panel</h2>
+            <h2 className="text-xl font-semibold text-gray-800">Explore Our Packages</h2>
             <OurPackages/>
           </div>
           <div
@@ -127,8 +128,8 @@ const Tabs = () => {
             id={`panel-${3}`}
             className="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300"
           >
-            <h2 className="text-xl font-semibold text-gray-800">Third tab panel</h2>
-            <p className="mt-4 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta.</p>
+            
+           <TourGuide></TourGuide>
           </div>
         </div>
       </div>

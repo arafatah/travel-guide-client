@@ -1,8 +1,39 @@
+import Swal from "sweetalert2";
+import useAuth from "../../Hooks/useAuth";
+import { axiosSecure } from "../../Hooks/useAxiosSecure";
 
+const Card = ({ pack }) => {
+  const { user } = useAuth();
+  const handleAddToWishlist = (id) => {
+    if (user) {
+      const wishlistItem = {
+        email: user.email,
+        img: pack.img,
+        type: pack.tourType,
+        title: pack.tripTitle,
+        price: pack.price,
+      };
+      axiosSecure
+        .post("/addToWishlist", wishlistItem)
+        .then((res) => {
+          if (res.data.insertedId) {
+            Swal.fire({
+              icon: "success",
+              title: `${wishlistItem.title} Added to wishlist`,
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
+        })
+        .catch((err) => console.log(err));
 
-const Card = ({pack}) => {
-    return (
-        <div>
+      console.log(wishlistItem);
+    } else {
+      console.log("User not logged in or package not found");
+    }
+  };
+  return (
+    <div>
       <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
         {/* Tour Photo */}
         <img
@@ -12,9 +43,13 @@ const Card = ({pack}) => {
         />
 
         <div className="p-4">
-          {/* Heart Icon for Wishlist */}
           <div className="flex justify-end">
-            <button className="text-red-500">
+            <button
+              onClick={() => {
+                handleAddToWishlist(pack._id);
+              }}
+              className="text-red-500"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -54,7 +89,7 @@ const Card = ({pack}) => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Card;
