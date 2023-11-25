@@ -1,9 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import Container from "../Container";
 import useAuth from "../../../Hooks/useAuth";
+import { useState } from "react";
 
 const Navbar = () => {
-    const {user, logOut} = useAuth();
+  const { user, logOut } = useAuth();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   const navLinks = (
     <>
       <li>
@@ -52,25 +58,60 @@ const Navbar = () => {
                 {navLinks}
               </ul>
             </div>
-            <Link to="/" className=""><img src="https://i.ibb.co/vv6HW8w/logo-light.png" alt="" /></Link>
+            <Link to="/" className="">
+              <img src="https://i.ibb.co/vv6HW8w/logo-light.png" alt="" />
+            </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navLinks}</ul>
           </div>
           <div className="navbar-end">
             {user?.email ? (
-              <div className="flex items-center space-x-1">
-                <div className="avatar">
-                  <div className="rounded-full w-10 h-10 m-1">
-                    <img src={user?.photoURL} alt="" />
+              <div className="relative inline-block text-left">
+                <div
+                  onClick={toggleDropdown}
+                  className="cursor-pointer flex items-center space-x-1"
+                >
+                  <div className="avatar">
+                    <div className="rounded-full w-10 h-10 m-1">
+                      <img src={user?.photoURL} alt="" />
+                    </div>
                   </div>
                 </div>
-                <button
-                  onClick={logOut}
-                  className="btn btn-ghost btn-sm rounded-btn"
-                >
-                  Log Out
-                </button>
+                {isDropdownOpen && (
+                  <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
+                    <div className="py-2 px-4">
+                      <div className="mb-2">
+                        <span className="font-semibold">
+                          {user.displayName}
+                        </span>
+                        <br />
+                        <span className="text-gray-500">{user.email}</span>
+                      </div>
+                      <hr className="my-2" />
+                      <Link
+                        to="/dashboard"
+                        onClick={toggleDropdown}
+                        className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        Dashboard
+                      </Link>
+                      <Link
+                        to="/offer-announcements"
+                        onClick={toggleDropdown}
+                        className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        Offer Announcements
+                      </Link>
+                      <button
+                        onClick={logOut}
+                        className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                      >
+                        Log Out
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="flex items-center space-x-1">
