@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import OurPackages from '../Home/OurPackage/OurPackages';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -84,33 +85,33 @@ const Tabs = () => {
             className="tab-panel p-6 transition duration-300"
           >
             <div className="text-center">
-  <h2 className="text-3xl font-extrabold text-gray-800 mb-4">Welcome to <span className="text-indigo-600">TRAVOL</span></h2>
-  <p className="text-gray-600 leading-relaxed">
-    <span className="block mb-4">Travol, where extraordinary journeys come to life! Embark on a voyage of discovery with our curated collection of immersive guided tours that redefine travel experiences. From enchanting cultural explorations to adrenaline-pumping adventures, we specialize in crafting memories that last a lifetime.</span>
+            <h2 className="text-3xl font-extrabold text-gray-800 mb-4">Welcome to <span className="text-indigo-600">TRAVOL</span></h2>
+            <p className="text-gray-600 leading-relaxed">
+                <span className="block mb-4">Travol, where extraordinary journeys come to life! Embark on a voyage of discovery with our curated collection of immersive guided tours that redefine travel experiences. From enchanting cultural explorations to adrenaline-pumping adventures, we specialize in crafting memories that last a lifetime.</span>
 
-    <span className="block mb-4 font-semibold">Why Choose TRAVOL?</span>
+                <span className="block mb-4 font-semibold">Why Choose TRAVOL?</span>
 
-    <ul className="list-disc list-inside mb-4">
-      <li>🌍 <span className="font-normal">Expert Guides: Our passionate and knowledgeable guides are the heartbeat of our tours. Unlock the secrets of each destination with local experts who bring history, culture, and stories to life.</span></li>
-      <li>🌟 <span className="font-normal">Unique Experiences: Dive into the extraordinary! We curate experiences that go beyond the ordinary, providing you with exclusive access to hidden gems and off-the-beaten-path wonders.</span></li>
-      <li>🤝 <span className="font-normal">Personalized Service: Your journey, your way. Enjoy a personalized touch with itineraries tailored to your preferences, ensuring every moment aligns with your travel dreams.</span></li>
-      <li>🌈 <span className="font-normal">Diverse Destinations: From bustling cityscapes to serene natural wonders, our tours span the globe. Explore diverse landscapes, cultures, and cuisines in the company of fellow explorers.</span></li>
-      <li>🛡️ <span className="font-normal">Safety and Comfort: Your safety is our top priority. Travel with peace of mind knowing that we uphold the highest standards of safety and comfort throughout your journey.</span></li>
-    </ul>
+                <ul className="list-disc list-inside mb-4">
+                <li>🌍 <span className="font-normal">Expert Guides: Our passionate and knowledgeable guides are the heartbeat of our tours. Unlock the secrets of each destination with local experts who bring history, culture, and stories to life.</span></li>
+                <li>🌟 <span className="font-normal">Unique Experiences: Dive into the extraordinary! We curate experiences that go beyond the ordinary, providing you with exclusive access to hidden gems and off-the-beaten-path wonders.</span></li>
+                <li>🤝 <span className="font-normal">Personalized Service: Your journey, your way. Enjoy a personalized touch with itineraries tailored to your preferences, ensuring every moment aligns with your travel dreams.</span></li>
+                <li>🌈 <span className="font-normal">Diverse Destinations: From bustling cityscapes to serene natural wonders, our tours span the globe. Explore diverse landscapes, cultures, and cuisines in the company of fellow explorers.</span></li>
+                <li>🛡️ <span className="font-normal">Safety and Comfort: Your safety is our top priority. Travel with peace of mind knowing that we uphold the highest standards of safety and comfort throughout your journey.</span></li>
+                </ul>
 
-    <span className="block mb-4 font-semibold">How It Works:</span>
+                <span className="block mb-4 font-semibold">How It Works:</span>
 
-    <ol className="list-decimal list-inside mb-4">
-      <li><span className="font-normal">Explore: Browse our diverse range of destinations and tour types.</span></li>
-      <li><span className="font-normal">Discover: Dive into detailed tour descriptions, showcasing the unique highlights of each adventure.</span></li>
-      <li><span className="font-normal">Book: Seamless booking with secure payment options. Your journey begins with a click.</span></li>
-    </ol>
+                <ol className="list-decimal list-inside mb-4">
+                <li><span className="font-normal">Explore: Browse our diverse range of destinations and tour types.</span></li>
+                <li><span className="font-normal">Discover: Dive into detailed tour descriptions, showcasing the unique highlights of each adventure.</span></li>
+                <li><span className="font-normal">Book: Seamless booking with secure payment options. Your journey begins with a click.</span></li>
+                </ol>
 
-    <span className="block mb-4">Join us in creating moments that go beyond the ordinary. Your next great adventure awaits with <span className="font-semibold text-indigo-600">TRAVOL</span>.</span>
+                <span className="block mb-4">Join us in creating moments that go beyond the ordinary. Your next great adventure awaits with <span className="font-semibold text-indigo-600">TRAVOL</span>.</span>
 
-    <span className="block">Ready to redefine travel? Let's embark on this journey together.</span>
-  </p>
-</div>
+                <span className="block">Ready to redefine travel? Let's embark on this journey together.</span>
+            </p>
+            </div>
 
           </div>
           <div
@@ -119,7 +120,7 @@ const Tabs = () => {
             className="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300"
           >
             <h2 className="text-xl font-semibold text-gray-800">Second tab panel</h2>
-            <p className="mt-4 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta.</p>
+            <OurPackages/>
           </div>
           <div
             role="tabpanel"

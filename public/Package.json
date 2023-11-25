@@ -1,0 +1,44 @@
+[
+    {
+      "_id": "1",
+      "img": "https://i.ibb.co/kmQHssT/pexels-cottonbro-studio-4979492.jpg",
+      "tourType": "Walking Tour",
+      "tripTitle": "Historic City Exploration",
+      "price": 89.99
+    },
+    {
+      "_id": "2",
+      "img": "https://i.ibb.co/BNM7m2b/pexels-te-lensfix-1371360.jpg",
+      "tourType": "Adventure",
+      "tripTitle": "Mountain Trekking Expedition",
+      "price": 149.99
+    },
+    {
+      "_id": "3",
+      "img": "https://i.ibb.co/H4q4RdL/pexels-oliver-sj-str-m-1122462.jpg",
+      "tourType": "Cruise",
+      "tripTitle": "Island Paradise Getaway",
+      "price": 199.99
+    },
+    {
+      "_id": "4",
+      "img": "https://i.ibb.co/zZMKzt3/pexels-iurii-ivashchenko-3498323.jpg",
+      "tourType": "Wildlife Safari",
+      "tripTitle": "African Safari Adventure",
+      "price": 299.99
+    },
+    {
+      "_id": "5",
+      "img": "https://i.ibb.co/SB6B6zK/pexels-murat-ahin-3522880.jpg",
+      "tourType": "Historical Sites",
+      "tripTitle": "Ancient Ruins Expedition",
+      "price": 129.99
+    },
+    {
+      "_id": "6",
+      "img": "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "tourType": "Cultural Experience",
+      "tripTitle": "Traditional Festivals Tour",
+      "price": 79.99
+    }
+  ]
