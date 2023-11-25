@@ -29,14 +29,14 @@ const Tabs = () => {
   }, [activeTab]);
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="sm:w-11/12 lg:w-7/12 mx-auto">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="sm:w-11/12 lg:w-full mx-auto">
         <div
           role="tablist"
           aria-label="tabs"
           className="relative w-full mx-auto h-12 grid grid-cols-1 sm:grid-cols-3 items-center px-[3px] sm:rounded-full bg-gray-900/20 overflow-hidden shadow-2xl shadow-900/20 transition"
         >
-          <div className="absolute indicator h-11 my-auto top-0 left-0 sm:col-span-1 sm:right-auto sm:left-0 rounded-full bg-white shadow-md"></div>
+          <div className="absolute indicator h-11 my-auto top-0 left-0 sm:col-span-1 sm:right-auto sm:left-0 rounded-full bg-emerald-700 shadow-md"></div>
           <button
             role="tab"
             aria-selected={activeTab === 1 ? 'true' : 'false'}
@@ -83,33 +83,35 @@ const Tabs = () => {
             id={`panel-${1}`}
             className="tab-panel p-6 transition duration-300"
           >
-            <h2 className="text-xl font-semibold text-gray-800">First tab panel</h2>
-            <p className="mt-4 text-gray-600">Welcome to [Your Company Name], where extraordinary journeys come to life! Embark on a voyage of discovery with our curated collection of immersive guided tours that redefine travel experiences. From enchanting cultural explorations to adrenaline-pumping adventures, we specialize in crafting memories that last a lifetime.
+            <div className="text-center">
+  <h2 className="text-3xl font-extrabold text-gray-800 mb-4">Welcome to <span className="text-indigo-600">TRAVOL</span></h2>
+  <p className="text-gray-600 leading-relaxed">
+    <span className="block mb-4">Travol, where extraordinary journeys come to life! Embark on a voyage of discovery with our curated collection of immersive guided tours that redefine travel experiences. From enchanting cultural explorations to adrenaline-pumping adventures, we specialize in crafting memories that last a lifetime.</span>
 
-Why Choose [Your Company Name]?
+    <span className="block mb-4 font-semibold">Why Choose TRAVOL?</span>
 
-At [Your Company Name], we believe that travel should be more than a destination; it should be an unforgettable adventure. Here's why our tours stand out:
+    <ul className="list-disc list-inside mb-4">
+      <li>🌍 <span className="font-normal">Expert Guides: Our passionate and knowledgeable guides are the heartbeat of our tours. Unlock the secrets of each destination with local experts who bring history, culture, and stories to life.</span></li>
+      <li>🌟 <span className="font-normal">Unique Experiences: Dive into the extraordinary! We curate experiences that go beyond the ordinary, providing you with exclusive access to hidden gems and off-the-beaten-path wonders.</span></li>
+      <li>🤝 <span className="font-normal">Personalized Service: Your journey, your way. Enjoy a personalized touch with itineraries tailored to your preferences, ensuring every moment aligns with your travel dreams.</span></li>
+      <li>🌈 <span className="font-normal">Diverse Destinations: From bustling cityscapes to serene natural wonders, our tours span the globe. Explore diverse landscapes, cultures, and cuisines in the company of fellow explorers.</span></li>
+      <li>🛡️ <span className="font-normal">Safety and Comfort: Your safety is our top priority. Travel with peace of mind knowing that we uphold the highest standards of safety and comfort throughout your journey.</span></li>
+    </ul>
 
-🌍 Expert Guides: Our passionate and knowledgeable guides are the heartbeat of our tours. Unlock the secrets of each destination with local experts who bring history, culture, and stories to life.
+    <span className="block mb-4 font-semibold">How It Works:</span>
 
-🌟 Unique Experiences: Dive into the extraordinary! We curate experiences that go beyond the ordinary, providing you with exclusive access to hidden gems and off-the-beaten-path wonders.
+    <ol className="list-decimal list-inside mb-4">
+      <li><span className="font-normal">Explore: Browse our diverse range of destinations and tour types.</span></li>
+      <li><span className="font-normal">Discover: Dive into detailed tour descriptions, showcasing the unique highlights of each adventure.</span></li>
+      <li><span className="font-normal">Book: Seamless booking with secure payment options. Your journey begins with a click.</span></li>
+    </ol>
 
-🤝 Personalized Service: Your journey, your way. Enjoy a personalized touch with itineraries tailored to your preferences, ensuring every moment aligns with your travel dreams.
+    <span className="block mb-4">Join us in creating moments that go beyond the ordinary. Your next great adventure awaits with <span className="font-semibold text-indigo-600">TRAVOL</span>.</span>
 
-🌈 Diverse Destinations: From bustling cityscapes to serene natural wonders, our tours span the globe. Explore diverse landscapes, cultures, and cuisines in the company of fellow explorers.
+    <span className="block">Ready to redefine travel? Let's embark on this journey together.</span>
+  </p>
+</div>
 
-🛡️ Safety and Comfort: Your safety is our top priority. Travel with peace of mind knowing that we uphold the highest standards of safety and comfort throughout your journey.
-
-How It Works:
-
-Explore: Browse our diverse range of destinations and tour types.
-Discover: Dive into detailed tour descriptions, showcasing the unique highlights of each adventure.
-Book: Seamless booking with secure payment options. Your journey begins with a click.
-Join us in creating moments that go beyond the ordinary. Your next great adventure awaits with [Your Company Name].
-
-Ready to redefine travel? Let's embark on this journey together.
-
-Feel free to adapt and customize this text to align with your specific brand voice and offerings.</p>
           </div>
           <div
             role="tabpanel"
