@@ -1,4 +1,4 @@
-const OurPackage = ({ pack }) => {
+const OurPackage = ({ pack, handleAddToWishlist }) => {
   return (
     <div>
       <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
@@ -12,7 +12,7 @@ const OurPackage = ({ pack }) => {
         <div className="p-4">
           {/* Heart Icon for Wishlist */}
           <div className="flex justify-end">
-            <button className="text-red-500">
+            <button onClick={()=>{handleAddToWishlist(pack._id)}} className="text-red-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
