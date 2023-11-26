@@ -90,7 +90,7 @@ const Navbar = () => {
                       </div>
                       <hr className="my-2" />
                       <Link
-                        to="/dashboard"
+                        to="/dashboard/wishlist"
                         onClick={toggleDropdown}
                         className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >

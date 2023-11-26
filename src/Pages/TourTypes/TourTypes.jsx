@@ -27,8 +27,7 @@ const TourTypes = () => {
       <Swiper
         slidesPerView={5}
         spaceBetween={20}
-        navigation={true}
-        modules={[Navigation]}
+        
         className="mySwiper"
       >
         {tourTypeData.map((tourType, index) => (

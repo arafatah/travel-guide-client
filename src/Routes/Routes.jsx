@@ -12,6 +12,10 @@ import AllPackages from "../Pages/AllPackages/AllPackages";
 import TourList from "../Pages/TourTypes/TourList";
 import AllStory from "../Pages/Home/StorySection/AllStory/AllStory";
 import SingleStory from "../Pages/Home/StorySection/SingleStory";
+import Dashboard from "../Layout/Dashboard";
+import WishList from "../Pages/Dashboard/WishList/WishList";
+import PrivetRoute from "./PrivetRoute";
+import WishlistDetails from "../Pages/Dashboard/WishList/WishlistDetails";
 
 const Routes = createBrowserRouter([
   {
@@ -54,8 +58,29 @@ const Routes = createBrowserRouter([
       {
         path: "/allStory/:id",
         element: <SingleStory />,
-        loader: ({ params }) => fetch(`http://localhost:5000/review/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/review/${params.id}`),
       },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "wishlist",
+        element: <PrivetRoute><WishList /></PrivetRoute>,
+        
+      },
+      {
+        path: "wishlist/packageDetails/:id",
+        element: <WishlistDetails />,
+        loader: ({ params }) =>
+          fetch(
+            `http://localhost:5000/wishlist/${params.id}`
+          ),
+      }
+      
     ],
   },
   {

@@ -1,11 +1,9 @@
-
-
 import { useEffect, useState } from "react";
 import TourGuideTable from "./TourGuideTable";
 
 const TourGuide = () => {
   const [tourGuide, setTourGuide] = useState([]);
-  
+
   useEffect(() => {
     fetch("http://localhost:5000/tourGuide")
       .then((res) => res.json())

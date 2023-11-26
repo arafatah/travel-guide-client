@@ -39,7 +39,7 @@ const StorySection = () => {
         {story.map((storyItem) => (
           <SwiperSlide key={storyItem._id}>
             <Link to={`/allStory/${storyItem._id}`}>
-              <div className="story-slide bg-white shadow-md p-8 rounded-md">
+              <div className="story-slide bg-white shadow-md p-8 px-20 rounded-md">
                 <div className="story-content text-left">
                   <h3 className="story-title text-xl font-bold mb-4">
                     {storyItem.username}'s Journey
