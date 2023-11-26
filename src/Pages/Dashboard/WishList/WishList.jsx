@@ -6,21 +6,20 @@ import Swal from "sweetalert2";
 const WishList = () => {
   const [wishlist, refetch] = useWishList();
   console.log(wishlist);
-const axiosSecure = useAxiosSecure()
+  const axiosSecure = useAxiosSecure();
   const handleDelete = (id) => {
     axiosSecure.delete(`/wishlist/${id}`)
     .then((res) => {
       if (res.data.deletedCount) {
         Swal.fire({
-            icon: "success",
-            title: "Deleted from wishlist",
-            showConfirmButton: false,
-            timer: 1500,
-            });
-            refetch();
+          icon: "success",
+          title: "Deleted from wishlist",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        refetch();
       }
     });
-    
   };
   return (
     <div>

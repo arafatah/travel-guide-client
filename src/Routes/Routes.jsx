@@ -16,6 +16,7 @@ import Dashboard from "../Layout/Dashboard";
 import WishList from "../Pages/Dashboard/WishList/WishList";
 import PrivetRoute from "./PrivetRoute";
 import WishlistDetails from "../Pages/Dashboard/WishList/WishlistDetails";
+import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 
 const Routes = createBrowserRouter([
   {
@@ -73,11 +74,15 @@ const Routes = createBrowserRouter([
         
       },
       {
+        path: "userHome",
+        element: <PrivetRoute><UserHome/></PrivetRoute>
+      },
+      {
         path: "wishlist/packageDetails/:id",
         element: <WishlistDetails />,
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/wishlist/${params.id}`
+            `http://localhost:5000/wishlist/new/${params.id}`
           ),
       }
       
