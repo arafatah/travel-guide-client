@@ -1,6 +1,7 @@
 import Tabs from "../Tabs/Tabs";
 import TourTypes from "../TourTypes/TourTypes";
 import Banner from "./Banner/Banner";
+import StorySection from "./StorySection/StorySection";
 
 const Home = () => {
   return (
@@ -10,7 +11,10 @@ const Home = () => {
       </div>
       <Tabs />
       <div>
-        <TourTypes/>
+        <TourTypes />
+      </div>
+      <div>
+        <StorySection />
       </div>
     </div>
   );

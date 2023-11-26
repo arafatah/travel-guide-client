@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "username": "AdventureExplorer123",
+      "tourType": "Wildlife Safari",
+      "rating": 5,
+      "review": "Embarked on an extraordinary wildlife safari adventure! As the golden sun began to paint the vast savannah, we set out on our journey into the heart of the animal kingdom. The roaring lions, the swift cheetahs, and the majestic elephants—all unfolded before us like scenes from a nature documentary. What made this experience truly exceptional was our guide's profound knowledge and passion. With every anecdote, the safari became a journey of discovery and understanding. A five-star adventure!",
+      "date": "2023-03-15"
+    },
+    {
+      "id": 2,
+      "username": "HistoryBuff456",
+      "tourType": "Historical Sites",
+      "rating": 4,
+      "review": "Traveled through time exploring the echoes of the past! From the ancient ruins with weathered stones whispering untold stories to the towering medieval castles that stood as silent witnesses to history. Our guide, a storyteller with a deep reverence for history, breathed life into each site. It was more than a tour; it was a journey through the annals of time, with every step bringing us closer to the tales of our ancestors. A four-star expedition into the pages of history.",
+      "date": "2023-04-02"
+    },
+    {
+      "id": 3,
+      "username": "CultureEnthusiast789",
+      "tourType": "Cultural Experience",
+      "rating": 5,
+      "review": "Immersed in the kaleidoscope of cultures! From the rhythmic beats of traditional dances to the vibrant hues of local festivals, our cultural exploration was a feast for the senses. The magic happened when we shared moments with locals, tried authentic cuisines, and gained a profound appreciation for diverse traditions. Our guide, a cultural maestro, not only led the way but also became a bridge connecting us to the soul of each community. A five-star journey into the heart of humanity.",
+      "date": "2023-05-10"
+    },
+    {
+      "id": 4,
+      "username": "NatureLover234",
+      "tourType": "Mountain Trekking Expedition",
+      "rating": 5,
+      "review": "Breathed in the crisp mountain air, conquered challenging trails, and reveled in breathtaking vistas. Our journey through the towering peaks was more than a trek; it was a communion with nature. Our guide, a true nature enthusiast, shared insights on the diverse flora and fauna, transforming the trek into an enriching experience. Each step was a poetic dance with the elements, and the summit was a triumphant embrace of the world below. A five-star odyssey into the heart of the mountains.",
+      "date": "2023-06-25"
+    },
+    {
+      "id": 5,
+      "username": "BeachExplorer567",
+      "tourType": "Island Paradise Getaway",
+      "rating": 4,
+      "review": "Dipped toes in crystal-clear waters, lounged on pristine beaches, and explored hidden coves. Our island adventure was a sun-soaked escapade into paradise. What made it truly special were the hidden gems our guide led us to—secluded spots away from the bustling crowds. Each sunrise brought a new revelation, and every sunset painted the sky with hues of serenity. A four-star retreat into the lap of luxury and nature's beauty.",
+      "date": "2023-07-12"
+    },
+    {
+      "id": 6,
+      "username": "CityWanderer890",
+      "tourType": "Walking Tour",
+      "rating": 4,
+      "review": "Strolled through historic streets, soaked in the architecture, and discovered charming local cafes. Our guide, a true city enthusiast, turned a simple walking tour into a fascinating journey through time. Each cobblestone street held secrets, and every building had a tale to tell. The city unfolded before us like a living canvas, and our guide's anecdotes added a layer of delight to each landmark. A four-star exploration of urban wonders.",
+      "date": "2023-08-08"
+    },
+    {
+      "id": 7,
+      "username": "SafariAdventurer123",
+      "tourType": "African Safari Adventure",
+      "rating": 5,
+      "review": "Roared with excitement as we witnessed the untamed beauty of Africa. The Big Five, vast landscapes, and starlit nights created unforgettable memories. Our guide's passion for wildlife added a special touch to the safari. With each turn of the safari vehicle, a new chapter of the wild unfolded. The rhythm of nature became our heartbeat, and the safari became a symphony of life. A five-star adventure into the heart of the African wilderness.",
+      "date": "2023-09-20"
+    }
+  ]
+  

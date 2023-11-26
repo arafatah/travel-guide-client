@@ -10,53 +10,61 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import AllPackages from "../Pages/AllPackages/AllPackages";
 import TourList from "../Pages/TourTypes/TourList";
-
+import AllStory from "../Pages/Home/StorySection/AllStory/AllStory";
+import SingleStory from "../Pages/Home/StorySection/SingleStory";
 
 const Routes = createBrowserRouter([
-    {
-        path: '/',
-        element: <MainLayout/>,
-        errorElement: <ErrorPage/>, 
-        children:[
-            {
-                path: '/',
-                element: <Home></Home>
-            },
-            {
-                path: "community", 
-                element: <Community></Community>
-            },
-            {
-                path: 'blogs',
-                element: <Blogs></Blogs>
-            },
-            {
-                path: "aboutUs",
-                element: <AboutUs></AboutUs>
-            },
-            {
-                path: "contact",
-                element: <ContactUs></ContactUs>
-            
-            },
-            {
-                path: "/allPackages",
-                element: <AllPackages/>
-            },
-            {
-                path: "/tour-type/:tourType",
-                element: <TourList/>
-            }
-           
-        ]
-    },
-    {
-        path: 'login',
-        element: <Login></Login>
-    },
-    {
-        path: 'register',
-        element: <Register></Register>
-    }
-])
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "community",
+        element: <Community></Community>,
+      },
+      {
+        path: "blogs",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "aboutUs",
+        element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "contact",
+        element: <ContactUs></ContactUs>,
+      },
+      {
+        path: "/allPackages",
+        element: <AllPackages />,
+      },
+      {
+        path: "/tour-type/:tourType",
+        element: <TourList />,
+      },
+      {
+        path: "/allStory",
+        element: <AllStory />,
+      },
+      {
+        path: "/allStory/:id",
+        element: <SingleStory />,
+        loader: ({ params }) => fetch(`http://localhost:5000/review/${params.id}`),
+      },
+    ],
+  },
+  {
+    path: "login",
+    element: <Login></Login>,
+  },
+  {
+    path: "register",
+    element: <Register></Register>,
+  },
+]);
 export default Routes;
