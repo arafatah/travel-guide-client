@@ -2,15 +2,36 @@ import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import useAuth from "../../Hooks/useAuth";
 import { imageUpload } from "../../api/utils";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { createUser, updateUserProfile, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
 
   const handleGoogleSignIn = () => {
-    signInWithGoogle().then((result) => {
-      navigate("/");
-      console.log(result.user);
+    signInWithGoogle()
+    .then((result) => {
+      const userInfo = {
+        name: result?.user?.displayName,
+        email: result?.user?.email,
+      };
+      axiosPublic.post("/users", userInfo)
+        .then((res) => {
+          console.log("user added");
+          if (res.data.insertedId) {
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Successfully Registered",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            navigate("/");
+          }
+        })
+        .catch((err) => console.log(err));
     });
   };
   const handleSignUp = async (e) => {
@@ -20,14 +41,32 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     const image = form.image.files[0];
-    const imageData = await imageUpload(image)
+    const imageData = await imageUpload(image);
     // console.log(imageData.data.display_url);
 
-    createUser(email, password)
-    .then((result) => {
+    createUser(email, password).then((result) => {
       console.log(result.user);
       updateUserProfile(name, imageData?.data?.display_url);
-      navigate("/");
+      const userInfo = {
+        name: name,
+        email: email,
+      };
+      axiosPublic
+        .post("/users", userInfo)
+        .then((res) => {
+          console.log("user added");
+          if (res.data.insertedId) {
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Successfully Registered",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            navigate("/");
+          }
+        })
+        .catch((err) => console.log(err));
     });
   };
   return (

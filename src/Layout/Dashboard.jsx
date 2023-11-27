@@ -1,8 +1,8 @@
-import { FaAd, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers, FaUtensils } from "react-icons/fa";
+import {  FaBook,  FaEnvelope, FaHome, FaList, FaSearch, } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
-    const isAdmin = false;  // TODO: Get isAdmin value from the database
+    const isAdmin = true;  // TODO: Get isAdmin value from the database
     const isGuide = false;  // TODO: Determine if the user is a guide
 
     return (
@@ -21,26 +21,14 @@ const Dashboard = () => {
                             </li>
                             <li>
                                 <NavLink to="/dashboard/addItems">
-                                    <FaUtensils></FaUtensils>
+                                    <FaBook></FaBook>
                                     Add Package
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/manageItems">
+                                <NavLink to="/dashboard/manageUser">
                                     <FaList></FaList>
-                                    Manage User
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/dashboard/bookings">
-                                    <FaBook></FaBook>
-                                    Manage Bookings
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/dashboard/users">
-                                    <FaUsers></FaUsers>
-                                    All Users
+                                    Manage Users
                                 </NavLink>
                             </li>
                         </>

@@ -1,14 +1,36 @@
 import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import useAuth from "../../Hooks/useAuth";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { signIn, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
   const handleGoogleSignIn = () => {
-    signInWithGoogle().then((result) => {
-      navigate("/");
-      console.log(result.user);
+    signInWithGoogle()
+    .then((result) => {
+      const userInfo = {
+        name: result?.user?.displayName,
+        email: result?.user?.email,
+      };
+      axiosPublic
+        .post("/users", userInfo)
+        .then((res) => {
+          console.log("user added");
+          if (res.data) {
+            navigate("/");
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Successfully Registered",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
+        })
+        .catch((err) => console.log(err));
     });
   };
   const handleSignIn = (e) => {

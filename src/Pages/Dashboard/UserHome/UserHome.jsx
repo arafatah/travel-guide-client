@@ -9,16 +9,13 @@ const UserHome = () => {
   const navigate = useNavigate();
  const axiosSecure = useAxiosSecure();
   const { register, handleSubmit, reset } = useForm();
-  const [rating, setRating] = useState(0); // Default rating value
+  const [rating, setRating] = useState(0); 
   const [review, setReview] = useState("");
-  const [date, setDate] = useState(new Date().toISOString()); // Default to current date
+  const [date, setDate] = useState(new Date().toISOString()); 
   const [tourType, setTourType] = useState("");
 
   const onSubmit = (data) => {
-    // Handle the submission of the story data (e.g., send it to the backend)
-    // After handling the submission, you can reset the form
 
-    // Send the data to the backend
     data = {
       ...data,
       rating,
@@ -33,7 +30,6 @@ const UserHome = () => {
 
 
     console.log(data);
-    // Reset the form and state
     reset();
     setRating(0);
     setReview("");
@@ -57,7 +53,6 @@ const UserHome = () => {
         </h2>
       </div>
 
-      {/* Form for adding a story */}
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700">

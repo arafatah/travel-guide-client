@@ -17,6 +17,13 @@ import WishList from "../Pages/Dashboard/WishList/WishList";
 import PrivetRoute from "./PrivetRoute";
 import WishlistDetails from "../Pages/Dashboard/WishList/WishlistDetails";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
+import SinglePackageDetails from "../Pages/SinglePackageDetails/SinglePackageDetails";
+import TourGuideProfile from "../Pages/TourGuide/TourGuideProfile";
+import MyBookings from "../Pages/Dashboard/UserHome/MyBookings";
+import GuideHome from "../Pages/Dashboard/GuideHome/GuideHome";
+import AssignedTour from "../Pages/Dashboard/GuideHome/AssignedTour";
+import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
+import ManageUser from "../Pages/Dashboard/AdminHome/ManageUser";
 
 const Routes = createBrowserRouter([
   {
@@ -62,28 +69,68 @@ const Routes = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/review/${params.id}`),
       },
+      {
+        path: "/package/:id",
+        element: <SinglePackageDetails />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/packages/${params.id}`),
+      },
+      {
+        path: "/tourGuide/:id",
+        element: <TourGuideProfile />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/tourGuide/${params.id}`),
+      },
     ],
   },
   {
     path: "dashboard",
     element: <Dashboard></Dashboard>,
     children: [
+      // User Routes
       {
         path: "wishlist",
-        element: <PrivetRoute><WishList /></PrivetRoute>,
-        
+        element: (
+          <PrivetRoute>
+            <WishList />
+          </PrivetRoute>
+        ),
       },
       {
         path: "userHome",
-        element: <PrivetRoute><UserHome/></PrivetRoute>
+        element: (
+          <PrivetRoute>
+            <UserHome />
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "userBookings",
+        element: <MyBookings></MyBookings>,
       },
       {
         path: "wishlist/packageDetails/:id",
         element: <WishlistDetails />,
         loader: ({ params }) =>
-          fetch(
-            `http://localhost:5000/wishlist/new/${params.id}`
-          ),
+          fetch(`http://localhost:5000/wishlist/new/${params.id}`),
+      },
+      // Guide Routes
+      {
+        path: "guideProfile",
+        element: <PrivetRoute><GuideHome /></PrivetRoute>,
+      },
+      {
+        path: "guideTours",
+        element: <PrivetRoute><AssignedTour /></PrivetRoute>,
+      },
+      // Admin Routes
+      {
+        path: "adminHome",
+        element: <AdminHome/>
+      },
+      {
+        path: "manageUser",
+        element: <ManageUser/>
       }
       
     ],

@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
 import { axiosSecure } from "../../Hooks/useAxiosSecure";
+import { Link } from "react-router-dom";
 
 const Card = ({ pack }) => {
   const { user } = useAuth();
@@ -83,9 +84,11 @@ const Card = ({ pack }) => {
           </div>
 
           {/* View Package Button */}
+          <Link to={`/package/${pack._id}`}>
           <button className="bg-indigo-500 text-white rounded-full px-6 py-2 hover:bg-indigo-600 transition duration-300">
             View Package
           </button>
+          </Link>
         </div>
       </div>
     </div>

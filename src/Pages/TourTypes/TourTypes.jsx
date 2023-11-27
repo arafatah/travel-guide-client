@@ -1,20 +1,20 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
 import { FaLandmark, FaTree } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { FaSailboat } from "react-icons/fa6";
+import { GiCultist, GiTigerHead } from "react-icons/gi";
+
 
 const TourTypes = () => {
   const tourTypeData = [
+    { icon: <FaLandmark size={32} />, label: 'Walking Tour' },
+    { icon: <FaTree size={32} />, label: 'Adventure' },
     { icon: <FaLandmark size={32} />, label: 'Historical Sites' },
-    { icon: <FaTree size={32} />, label: 'Wildlife Safari' },
-    { icon: <FaLandmark size={32} />, label: 'Historical Sites' },
-    { icon: <FaTree size={32} />, label: 'Cultural Experience' },
-    { icon: <FaTree size={32} />, label: 'Historical Sites' },
-    { icon: <FaTree size={32} />, label: 'Wildlife Safari' },
-    { icon: <FaTree size={32} />, label: 'Cultural Experience' },
-    { icon: <FaTree size={32} />, label: 'Cruise' },
+    { icon: <FaSailboat size={32} />, label: 'Cruise' },
+    { icon: <GiTigerHead  size={32} />, label: 'Wildlife Safari' },
+    { icon: <GiCultist size={32} />, label: 'Cultural Experience' },
   ];
 
   return (

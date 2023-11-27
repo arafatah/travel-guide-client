@@ -1,79 +1,302 @@
 [
-    {
-      "_id": "1",
-      "img": "https://i.ibb.co/kmQHssT/pexels-cottonbro-studio-4979492.jpg",
-      "tourType": "Walking Tour",
-      "tripTitle": "Historic City Exploration",
-      "price": 89.99
-    },
-    {
-      "_id": "2",
-      "img": "https://i.ibb.co/BNM7m2b/pexels-te-lensfix-1371360.jpg",
-      "tourType": "Adventure",
-      "tripTitle": "Mountain Trekking Expedition",
-      "price": 149.99
-    },
-    {
-      "_id": "3",
-      "img": "https://i.ibb.co/H4q4RdL/pexels-oliver-sj-str-m-1122462.jpg",
-      "tourType": "Cruise",
-      "tripTitle": "Island Paradise Getaway",
-      "price": 199.99
-    },
-    {
-      "_id": "3",
-      "img": "https://i.ibb.co/H4q4RdL/pexels-oliver-sj-str-m-1122462.jpg",
-      "tourType": "Cruise",
-      "tripTitle": "Island Paradise Getaway",
-      "price": 199.99
-    },
-    {
-      "_id": "3",
-      "img": "https://i.ibb.co/H4q4RdL/pexels-oliver-sj-str-m-1122462.jpg",
-      "tourType": "Cruise",
-      "tripTitle": "Island Paradise Getaway",
-      "price": 199.99
-    },
-    {
-      "_id": "3",
-      "img": "https://i.ibb.co/H4q4RdL/pexels-oliver-sj-str-m-1122462.jpg",
-      "tourType": "Cruise",
-      "tripTitle": "Island Paradise Getaway",
-      "price": 199.99
-    },
-    {
-      "_id": "3",
-      "img": "https://i.ibb.co/H4q4RdL/pexels-oliver-sj-str-m-1122462.jpg",
-      "tourType": "Cruise",
-      "tripTitle": "Island Paradise Getaway",
-      "price": 199.99
-    },
-    {
-      "_id": "3",
-      "img": "https://i.ibb.co/H4q4RdL/pexels-oliver-sj-str-m-1122462.jpg",
-      "tourType": "Cruise",
-      "tripTitle": "Island Paradise Getaway",
-      "price": 199.99
-    },
-    {
-      "_id": "4",
-      "img": "https://i.ibb.co/zZMKzt3/pexels-iurii-ivashchenko-3498323.jpg",
-      "tourType": "Wildlife Safari",
-      "tripTitle": "African Safari Adventure",
-      "price": 299.99
-    },
-    {
-      "_id": "5",
-      "img": "https://i.ibb.co/SB6B6zK/pexels-murat-ahin-3522880.jpg",
-      "tourType": "Historical Sites",
-      "tripTitle": "Ancient Ruins Expedition",
-      "price": 129.99
-    },
-    {
-      "_id": "6",
-      "img": "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
-      "tourType": "Cultural Experience",
-      "tripTitle": "Traditional Festivals Tour",
-      "price": 79.99
-    }
-  ]
+  {
+    "_id": "1",
+    "img": [
+      "https://i.ibb.co/kmQHssT/pexels-cottonbro-studio-4979492.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Walking Tour",
+    "tripTitle": "Historic City Exploration",
+    "price": 89.99,
+    "tourPlan": [
+      "Day 01 - Visit historical landmarks",
+      "Day 02 - Explore local markets",
+      "Day 03 - Guided walking tour of the city",
+      "Day 04 - Museum visits",
+      "Day 05 - Culinary tour of the area"
+    ]
+  },
+  {
+    "_id": "2",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Adventure",
+    "tripTitle": "Mountain Trekking Expedition",
+    "price": 149.99,
+    "tourPlan": [
+      "Day 01 - Trek to base camp",
+      "Day 02 - Summit attempt",
+      "Day 03 - Descend to lower altitude",
+      "Day 04 - Rest day",
+      "Day 05 - Return to starting point"
+    ]
+  },
+  {
+    "_id": "3",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Cruise",
+    "tripTitle": "Island Paradise Getaway",
+    "price": 199.99,
+    "tourPlan": [
+      "Day 01 - Board cruise ship",
+      "Day 02 - Explore islands",
+      "Day 03 - Relax on sandy beaches",
+      "Day 04 - Water activities",
+      "Day 05 - Farewell dinner"
+    ]
+  },
+  {
+    "_id": "4",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Wildlife Safari",
+    "tripTitle": "African Safari Adventure",
+    "price": 299.99,
+    "tourPlan": [
+      "Day 01 - Safari drive in national park",
+      "Day 02 - Visit wildlife conservation center",
+      "Day 03 - Hot air balloon safari",
+      "Day 04 - Bushwalk with experienced guide",
+      "Day 05 - Evening campfire"
+    ]
+  },
+  {
+    "_id": "5",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Historical Sites",
+    "tripTitle": "Ancient Ruins Expedition",
+    "price": 129.99,
+    "tourPlan": [
+      "Day 01 - Explore ancient ruins",
+      "Day 02 - Historical guided tour",
+      "Day 03 - Archaeological dig experience",
+      "Day 04 - Visit local museums",
+      "Day 05 - Capture sunset over ruins"
+    ]
+  },
+  {
+    "_id": "6",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Cultural Experience",
+    "tripTitle": "Traditional Festivals Tour",
+    "price": 79.99,
+    "tourPlan": [
+      "Day 01 - Attend local cultural festival",
+      "Day 02 - Traditional dance performances",
+      "Day 03 - Hands-on cultural workshops",
+      "Day 04 - Cultural exchange with locals",
+      "Day 05 - Farewell celebration"
+    ]
+  },
+  {
+    "_id": "7",
+    "img": [
+      "https://i.ibb.co/kmQHssT/pexels-cottonbro-studio-4979492.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Walking Tour",
+    "tripTitle": "City Street Food Adventure",
+    "price": 69.99,
+    "tourPlan": [
+      "Day 01 - Street food market exploration",
+      "Day 02 - Cooking class with local chefs",
+      "Day 03 - Foodie walking tour",
+      "Day 04 - Tasting session at local eateries",
+      "Day 05 - Culinary surprises"
+    ]
+  },
+  {
+    "_id": "8",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Adventure",
+    "tripTitle": "Jungle Canopy Zip Line",
+    "price": 119.99,
+    "tourPlan": [
+      "Day 01 - Introduction to zip-lining",
+      "Day 02 - Canopy adventure in the jungle",
+      "Day 03 - Adrenaline-pumping zip lines",
+      "Day 04 - Scenic views from tree platforms",
+      "Day 05 - Thrilling jungle descent"
+    ]
+  },
+  {
+    "_id": "9",
+    "img": [
+      "https://i.ibb.co/kmQHssT/pexels-cottonbro-studio-4979492.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Walking Tour",
+    "tripTitle": "Gastronomic Delights Stroll",
+    "price": 79.99,
+    "tourPlan": [
+      "Day 01 - Culinary exploration of the city",
+      "Day 02 - Street food tasting adventure",
+      "Day 03 - Visit local markets for fresh produce",
+      "Day 04 - Cooking class with renowned chefs",
+      "Day 05 - Farewell dinner at a top-rated restaurant"
+    ]
+  },
+  {
+    "_id": "10",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Adventure",
+    "tripTitle": "Volcano Expedition",
+    "price": 169.99,
+    "tourPlan": [
+      "Day 01 - Journey to the base of the volcano",
+      "Day 02 - Ascend the volcano slopes",
+      "Day 03 - Exploration of volcanic craters",
+      "Day 04 - Panoramic views from the summit",
+      "Day 05 - Descent and celebration at base camp"
+    ]
+  },
+  {
+    "_id": "11",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Cruise",
+    "tripTitle": "Mediterranean Yacht Getaway",
+    "price": 249.99,
+    "tourPlan": [
+      "Day 01 - Boarding the luxury yacht",
+      "Day 02 - Coastal cruise along picturesque landscapes",
+      "Day 03 - Island hopping and snorkeling",
+      "Day 04 - Fine dining on the yacht deck",
+      "Day 05 - Sunset sail and farewell party"
+    ]
+  },
+  {
+    "_id": "12",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Wildlife Safari",
+    "tripTitle": "Amazon Rainforest Expedition",
+    "price": 329.99,
+    "tourPlan": [
+      "Day 01 - Riverboat journey into the rainforest",
+      "Day 02 - Guided hike in the heart of the Amazon",
+      "Day 03 - Wildlife spotting and birdwatching",
+      "Day 04 - Canopy walk and jungle exploration",
+      "Day 05 - Farewell bonfire and storytelling"
+    ]
+  },
+  {
+    "_id": "13",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Historical Sites",
+    "tripTitle": "Medieval Castle Tour",
+    "price": 149.99,
+    "tourPlan": [
+      "Day 01 - Explore ancient castles and fortresses",
+      "Day 02 - Historical reenactments and storytelling",
+      "Day 03 - Castle architecture and design insights",
+      "Day 04 - Traditional medieval feasts",
+      "Day 05 - Grand tour finale with a royal banquet"
+    ]
+  },
+  {
+    "_id": "14",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Cultural Experience",
+    "tripTitle": "Art and Music Festival Journey",
+    "price": 99.99,
+    "tourPlan": [
+      "Day 01 - Attend opening ceremonies of the festival",
+      "Day 02 - Art exhibits and live music performances",
+      "Day 03 - Interactive workshops with artists",
+      "Day 04 - Cultural exchange with festival attendees",
+      "Day 05 - Closing party and farewell celebrations"
+    ]
+  },
+  {
+    "_id": "15",
+    "img": [
+      "https://i.ibb.co/31C1mbK/pexels-maria-orlova-4940748.jpg",
+      "https://i.ibb.co/6vfvF7X/pexels-mark-stebnicki-5759401.jpg",
+      "https://i.ibb.co/NjLPsfX/pexels-ruslan-keba-1036918.jpg",
+      "https://i.ibb.co/GPzrqGJ/pexels-alex-green-5699468.jpg",
+      "https://i.ibb.co/z5Xx4zY/pexels-siim-moel-5643985.jpg"
+    ],
+    "tourType": "Walking Tour",
+    "tripTitle": "Secrets of the Old Town",
+    "price": 89.99,
+    "tourPlan": [
+      "Day 01 - Guided walk through historic districts",
+      "Day 02 - Hidden gems and local stories",
+      "Day 03 - Architectural wonders and landmarks",
+      "Day 04 - Culinary delights in old-town cafes",
+      "Day 05 - Final stroll with a farewell gathering"
+    ]
+  }
+]
