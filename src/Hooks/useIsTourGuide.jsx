@@ -8,7 +8,7 @@ const useIsTourGuide = () => {
   const axiosSecure = useAxiosSecure();
   const { data: isTourGuide } = useQuery({
     queryKey: [user?.email, "isTourGuide"],
-    enabled: !loading ,
+    enabled: !loading && !!localStorage.getItem('access-token'),
     queryFn: async () => {
       const res = await axiosSecure.get(`/users/tourGuide/${user?.email}`);
       console.log(res.data);

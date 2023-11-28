@@ -9,12 +9,11 @@ const Login = () => {
   const navigate = useNavigate();
   const axiosPublic = useAxiosPublic();
   const handleGoogleSignIn = () => {
-    signInWithGoogle()
-    .then((result) => {
+    signInWithGoogle().then((result) => {
       const userInfo = {
         name: result?.user?.displayName,
         email: result?.user?.email,
-        role: "tourist"
+        role: "tourist",
       };
       axiosPublic
         .post("/users", userInfo)

@@ -13,6 +13,15 @@ const Register = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
     .then((result) => {
+      navigate("/");
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Successfully Registered",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      
       const userInfo = {
         name: result?.user?.displayName,
         email: result?.user?.email,

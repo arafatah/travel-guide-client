@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { FaSailboat } from "react-icons/fa6";
 import { GiCultist, GiTigerHead } from "react-icons/gi";
 
-
 const TourTypes = () => {
   const tourTypeData = [
     { icon: <FaLandmark size={32} />, label: 'Walking Tour' },
@@ -18,7 +17,7 @@ const TourTypes = () => {
   ];
 
   return (
-    <div className="container mx-auto my-10">
+    <div className="container mx-auto my-16">
       <div>
         <h3 className="mb-11 text-center font-medium">
           Tour types Of Our Website <hr className="w-44 mt-3 mx-auto" />
@@ -27,8 +26,7 @@ const TourTypes = () => {
       <Swiper
         slidesPerView={5}
         spaceBetween={20}
-        
-        className="mySwiper"
+        className="mySwiper md:grid lg:grid-cols-3 xl:grid-cols-5"
       >
         {tourTypeData.map((tourType, index) => (
           <SwiperSlide key={index}>

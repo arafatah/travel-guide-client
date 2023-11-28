@@ -59,7 +59,7 @@ const OurPackages = () => {
           />
         ))}
       </div>
-      <div className="mt-16 text-center">
+      <div className="lg:mt-16 text-center">
         <Link to="/allPackages">
           <button className="bg-indigo-500 text-white rounded-full px-6 py-2 hover:bg-indigo-600 transition duration-300">
             All Packages

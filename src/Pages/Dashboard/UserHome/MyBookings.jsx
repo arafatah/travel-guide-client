@@ -1,12 +1,13 @@
+import Swal from "sweetalert2";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useBookings from "../../../Hooks/useBookings";
 
 const MyBookings = () => {
-  const [bookings] = useBookings();
+  const [bookings, refetch] = useBookings();
   console.log(bookings);
+  const axiosSecure = useAxiosSecure();
 
-  // Function to handle applying for discount
   const handleApplyDiscount = () => {
-    // Logic for applying discount
     console.log("Congratulations! You've got a discount.");
   };
 
@@ -42,7 +43,7 @@ const MyBookings = () => {
                         : "text-white"
                     }`}
                   >
-                    {booking.status }
+                    {booking.status}
                   </span>
                 </td>
                 <td className="border p-2">
@@ -50,23 +51,47 @@ const MyBookings = () => {
                     <>
                       <button
                         className="text-sm text-red-500 btn-sm mr-2"
-                        onClick={() => console.log('Cancel')}
+                        onClick={() =>
+                          Swal.fire({
+                            title: "Are you sure?",
+                            text: "You won't be able to revert this!",
+                            icon: "warning",
+                            showCancelButton: true,
+                            confirmButtonColor: "#3085d6",
+                            cancelButtonColor: "#d33",
+                            confirmButtonText: "Yes, delete it!",
+                          }).then((result) => {
+                            if (result.isConfirmed) {
+                              axiosSecure
+                                .delete(`/booking/${booking._id}`)
+                                .then((res) => {
+                                  refetch();
+                                  console.log(res);
+                                  Swal.fire(
+                                    "Booking Canceled!",
+                                    "Your booking has been canceled.",
+                                    "success"
+                                  );
+                                });
+                            }
+                          })
+                        }
                       >
                         Cancel
                       </button>
                       <button
                         className="text-sm text-blue-500 btn btn-sm"
-                        onClick={() => console.log('Apply')}
+                        onClick={() => console.log("Apply")}
                         disabled={bookings.length <= 3}
                       >
                         Apply
                       </button>
                     </>
                   )}
-                  {booking.status === 'Approved' && (
+                  {booking.status === "Approved" && (
                     <button
                       className="text-sm text-green-500 btn btn-sm px-4"
-                      onClick={() => console.log('Pay')}
+                      onClick={() => console.log("Pay")}
                     >
                       Pay
                     </button>
@@ -79,7 +104,9 @@ const MyBookings = () => {
       </div>
       {bookings.length > 3 && (
         <div className="mt-4">
-          <p className="text-green-500">Congratulations! You've got a discount.</p>
+          <p className="text-green-500">
+            Congratulations! You've got a discount.
+          </p>
           <button
             className="text-sm text-green-500 btn btn-sm px-4"
             onClick={handleApplyDiscount}

@@ -249,12 +249,22 @@ const SinglePackageDetails = () => {
             </div>
 
             {/* Submit Button */}
-            <button
-              type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
-            >
-              Book Now
-            </button>
+            {user?.email ? (
+  <button
+    type="submit"
+    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+  >
+    Book Now
+  </button>
+) : (
+  <button
+    type="button"
+    className="bg-gray-300 text-gray-600 px-4 py-2 rounded cursor-not-allowed"
+    disabled
+  >
+    Book Now
+  </button>
+)}
           </form>
         </Modal>
       </Container>

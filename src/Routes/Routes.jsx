@@ -108,11 +108,11 @@ const Routes = createBrowserRouter([
       },
       {
         path: "userBookings",
-        element: <MyBookings></MyBookings>,
+        element: <PrivetRoute><MyBookings></MyBookings></PrivetRoute>,
       },
       {
         path: "wishlist/packageDetails/:id",
-        element: <WishlistDetails />,
+        element: <PrivetRoute><WishlistDetails /></PrivetRoute>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/wishlist/new/${params.id}`),
       },
@@ -132,7 +132,7 @@ const Routes = createBrowserRouter([
       },
       {
         path: "manageUser",
-        element: <ManageUser/>
+        element: <AdminRoute><ManageUser/></AdminRoute>
       },
       {
         path: "addPackage",
