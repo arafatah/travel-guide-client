@@ -8,9 +8,12 @@ import { useEffect, useState } from "react";
 import useAuth from "../../Hooks/useAuth";
 import { axiosSecure } from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { FaAddressBook, FaInfo } from "react-icons/fa";
+import { FaExplosion } from "react-icons/fa6";
 
 const SinglePackageDetails = () => {
   const singleData = useLoaderData();
+  console.log(singleData);
   const { img, price, tripTitle, tourType, tourPlan } = singleData;
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const { user } = useAuth();
@@ -28,9 +31,9 @@ const SinglePackageDetails = () => {
 
   // State for form data
   const [formData, setFormData] = useState({
-    touristName: user.displayName,
-    touristEmail: user.email,
-    touristImage: user.photoURL,
+    touristName: user?.displayName,
+    touristEmail: user?.email,
+    touristImage: user?.photoURL,
     tourDate: new Date(),
     selectedGuide: "",
     price: price,
@@ -97,10 +100,16 @@ const SinglePackageDetails = () => {
 
         {/* About The Tour Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">About The Tour</h2>
-          <p className="text-gray-700">{tourType}</p>
-          <p className="text-gray-700">{tripTitle}</p>
-          <p className="text-gray-700">${price}</p>
+          <div className="flex">
+          <FaExplosion className="mr-3 text-2xl text-blue-500"/>
+          <h2 className="text-3xl font-bold mb-4 text-blue-600">
+             About The Tour
+          </h2>
+          </div>
+          
+          <p className="dark:text-white text-gray-800 text-lg mb-2">{tourType}</p>
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">{tripTitle}</h3>
+          <p className="text-green-600 font-semibold text-xl mb-4">${price}</p>
         </div>
 
         {/* Tour Plan Section */}
@@ -141,7 +150,7 @@ const SinglePackageDetails = () => {
                 type="text"
                 name="touristName"
                 readOnly
-                defaultValue={user.displayName}
+                defaultValue={user?.displayName}
                 value={formData.touristName}
                 onChange={handleInputChange}
                 className="mt-1 p-2 border rounded-md w-full"
@@ -157,7 +166,7 @@ const SinglePackageDetails = () => {
                 type="email"
                 name="touristEmail"
                 readOnly
-                defaultValue={user.email}
+                defaultValue={user?.email}
                 value={formData.touristEmail}
                 onChange={handleInputChange}
                 className="mt-1 p-2 border rounded-md w-full"
@@ -173,7 +182,7 @@ const SinglePackageDetails = () => {
                 type="text"
                 name="touristImage"
                 readOnly
-                defaultValue={user.photoURL}
+                defaultValue={user?.photoURL}
                 value={formData.defaultValue}
                 onChange={handleInputChange}
                 className="mt-1 p-2 border rounded-md w-full"

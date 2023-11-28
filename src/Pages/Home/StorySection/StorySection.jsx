@@ -21,10 +21,11 @@ const StorySection = () => {
   return (
     <div className="story-container mx-auto p-10">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-center text-gray-800">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white">
           Tourist Stories
+          <hr  className="w-60 mx-auto"/>
         </h2>
-        <p className="text-lg text-center text-gray-600">
+        <p className="text-lg text-center text-gray-900 dark:text-white">
           Read what our amazing tourists say about their experiences.
         </p>
       </div>

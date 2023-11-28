@@ -2,31 +2,28 @@ import useAssignedTour from "../../../Hooks/useAssignedTour";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const AssignedTour = () => {
-  const [assignedTour] = useAssignedTour();
+  const [assignedTour, refetch] = useAssignedTour();
   console.log(assignedTour);
   const axiosSecure = useAxiosSecure();
 
-  // Function to handle accepting a tour
   const handleAcceptTour = (tourId) => {
-    // Logic for accepting the tour
     axiosSecure
       .patch(`/booking/accept/${tourId}`)
       .then((res) => {
         console.log(res);
+        refetch()
       })
       .catch((err) => console.log(err));
 
     console.log(`Accepted tour with ID: ${tourId}`);
   };
 
-  // Function to handle rejecting a tour
   const handleRejectTour = (tourId) => {
-    // Logic for rejecting the tour
     axiosSecure
-
       .patch(`/booking/reject/${tourId}`)
       .then((res) => {
         console.log(res);
+        refetch()
       })
       .catch((err) => console.log(err));
 
@@ -54,18 +51,24 @@ const AssignedTour = () => {
               <td className="border p-2">{tour.tourDate}</td>
               <td className="border p-2">${tour.price}</td>
               <td className="border p-2">
-                <button
-                  onClick={() => handleAcceptTour(tour._id)}
-                  className="bg-green-500 text-white px-4 py-2 rounded mr-2"
-                >
-                  Accept
-                </button>
-                <button
-                  onClick={() => handleRejectTour(tour._id)}
-                  className="bg-red-500 text-white px-4 py-2 rounded"
-                >
-                  Reject
-                </button>
+                {tour.status === "pending" && (
+                  <>
+                    <button
+                      onClick={() => handleAcceptTour(tour._id)}
+                      className="bg-green-500 text-white px-4 py-2 rounded mr-2"
+                    >
+                      Accept
+                    </button>
+                    <button
+                      onClick={() => handleRejectTour(tour._id)}
+                      className="bg-red-500 text-white px-4 py-2 rounded"
+                    >
+                      Reject
+                    </button>
+                  </>
+                )}
+                {tour.status === "Approved" && <h2>Approved</h2>}
+                {tour.status === "Rejected" && <h2>Rejected</h2>}
               </td>
             </tr>
           ))}

@@ -76,13 +76,7 @@ const Dashboard = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/order/salad">
-              <FaSearch></FaSearch>
-              Menu
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/order/contact">
+            <NavLink to="/contact">
               <FaEnvelope></FaEnvelope>
               Contact
             </NavLink>
