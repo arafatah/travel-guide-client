@@ -3,6 +3,7 @@ import Tabs from "../Tabs/Tabs";
 import TourTypes from "../TourTypes/TourTypes";
 import Banner from "./Banner/Banner";
 import StorySection from "./StorySection/StorySection";
+import SubscribeSection from "../SubscribeSection/SubscribeSection";
 
 const Home = () => {
   return (
@@ -19,6 +20,9 @@ const Home = () => {
       </div>
       <div>
         <StorySection />
+      </div>
+      <div>
+        <SubscribeSection/>
       </div>
     </div>
   );
