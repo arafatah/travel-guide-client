@@ -5,7 +5,7 @@ import { FacebookShareButton } from 'react-share';
 const SingleStory = () => {
   const story = useLoaderData();
 
-  const shareUrl = `http://localhost:5173/allStory/${story?.id}`; // Replace with your actual URL
+  const shareUrl = `https://web.programming-hero.com`; 
 
   return (
     <div className="container mx-auto my-10 p-6 bg-white rounded-md shadow-md">

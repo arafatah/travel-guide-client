@@ -2,8 +2,8 @@ import {  FaBook,  FaEnvelope, FaHome, FaList, FaSearch, } from "react-icons/fa"
 import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
-    const isAdmin = true;  // TODO: Get isAdmin value from the database
-    const isGuide = false;  // TODO: Determine if the user is a guide
+    const isAdmin = false;  // TODO: Get isAdmin value from the database
+    const isGuide = true;  // TODO: Determine if the user is a guide
 
     return (
         <div className="flex">

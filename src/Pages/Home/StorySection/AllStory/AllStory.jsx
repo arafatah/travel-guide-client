@@ -19,7 +19,7 @@ const AllStory = () => {
         <div key={story.id} className="mb-8">
           <h3 className="text-xl font-semibold mb-2">{story.username}</h3>
           <p className="mb-4">{story.review}</p>
-          <FacebookShareButton url={`http://localhost:5173/allStory/${story.id}`}>
+          <FacebookShareButton url={`https://web.programming-hero.com`}>
             <button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300">
               <div className='flex items-center'>
                 <FaFacebook className='mr-2'/> Share on Facebook
