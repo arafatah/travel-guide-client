@@ -6,7 +6,7 @@ import Container from "../../Components/Shared/Container";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useAuth from "../../Hooks/useAuth";
-import  { axiosSecure } from "../../Hooks/useAxiosSecure";
+import { axiosSecure } from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 
 const SinglePackageDetails = () => {
@@ -14,7 +14,7 @@ const SinglePackageDetails = () => {
   const { img, price, tripTitle, tourType, tourPlan } = singleData;
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const { user } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [tourGuide, setTourGuide] = useState([]);
 
   useEffect(() => {
@@ -35,6 +35,7 @@ const SinglePackageDetails = () => {
     selectedGuide: "",
     price: price,
     tripTitle: tripTitle,
+    status: "pending",
   });
 
   // Function to handle form input changes
@@ -51,18 +52,18 @@ const SinglePackageDetails = () => {
   // Function to handle form submission
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    axiosSecure.post("http://localhost:5000/booking", formData)
-    .then((res) =>{
-      console.log(res);
-      Swal.fire({
-        icon: 'success',
-        title: '',
-        text: 'Confirm your Booking',
-      });
-      navigate("/dashboard/userBookings")
-
-    })
-    .catch((err) => console.log(err));
+    axiosSecure
+      .post("http://localhost:5000/booking", formData)
+      .then((res) => {
+        console.log(res);
+        Swal.fire({
+          icon: "success",
+          title: "",
+          text: "Confirm your Booking",
+        });
+        navigate("/dashboard/userBookings");
+      })
+      .catch((err) => console.log(err));
     console.log(formData);
     setModalIsOpen(false);
   };

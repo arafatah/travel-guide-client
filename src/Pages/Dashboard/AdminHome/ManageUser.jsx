@@ -14,8 +14,8 @@ const ManageUser = () => {
 
   // Function to handle making a user an admin
   const handleMakeAdmin = (user) => {
-    // Logic for making the user an admin
-    axiosSecure.patch(`/users/admin/${user._id}`).then((res) => {
+    axiosSecure.patch(`/users/admin/${user._id}`)
+    .then((res) => {
       if (res.data.modifiedCount === 1) {
         refetch();
         Swal.fire({
@@ -31,9 +31,7 @@ const ManageUser = () => {
     console.log(`Making user with ID ${user._id} an admin`);
   };
 
-  // Function to handle making a user a tour guide
   const handleMakeTourGuide = (user) => {
-    // Logic for making the user a tour guide
     axiosSecure.patch(`/users/guide/${user._id}`).then((res) => {
       if (res.data.modifiedCount === 1) {
         refetch();
@@ -70,19 +68,22 @@ const ManageUser = () => {
               <td className="border p-2">
                 <button
                   onClick={() => handleMakeAdmin(user)}
-                  disabled={user.role === "Admin"}
+                  disabled={user.role === "Admin" || user.role === "Tour Guide"}
                   className={`bg-blue-500 text-white px-4 py-2 rounded mr-2 ${
-                    user.role === "Admin" && "opacity-50 cursor-not-allowed"
+                    user.role === "Admin" && "opacity-50 cursor-not-allowed" ||
+                    user.role === "Tour Guide" && "opacity-50 cursor-not-allowed"
+
                   }`}
                 >
                   Make Admin
                 </button>
                 <button
                   onClick={() => handleMakeTourGuide(user)}
-                  disabled={user.role === "Tour Guide"}
+                  disabled={user.role === "Tour Guide" || user.role === "Admin"}
                   className={`bg-green-500 text-white px-4 py-2 rounded ${
                     user.role === "Tour Guide" &&
-                    "opacity-50 cursor-not-allowed"
+                    "opacity-50 cursor-not-allowed"||
+                    user.role === "Admin" && "opacity-50 cursor-not-allowed"
                   }`}
                 >
                   Make Tour Guide

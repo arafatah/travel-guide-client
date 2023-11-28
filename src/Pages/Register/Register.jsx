@@ -16,6 +16,7 @@ const Register = () => {
       const userInfo = {
         name: result?.user?.displayName,
         email: result?.user?.email,
+        role: "tourist"
       };
       axiosPublic.post("/users", userInfo)
         .then((res) => {
@@ -50,6 +51,7 @@ const Register = () => {
       const userInfo = {
         name: name,
         email: email,
+        role: "tourist"
       };
       axiosPublic
         .post("/users", userInfo)
