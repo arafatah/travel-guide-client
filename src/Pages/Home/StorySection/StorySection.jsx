@@ -5,6 +5,10 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
+
 
 const StorySection = () => {
   const [story, setStory] = useState([]);
@@ -17,10 +21,16 @@ const StorySection = () => {
       });
   }, []);
 
+  useEffect(()=>{
+    Aos.init({duration:2000})
+
+},[])
+
   return (
     <div className="story-container mx-auto p-4 md:p-10">
       <div className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-white">
+        <h2 data-aos = "fade-left"
+ className="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-white">
           Tourist Stories
           <hr className="w-16 md:w-60 mx-auto"/>
         </h2>
@@ -28,7 +38,7 @@ const StorySection = () => {
           Read what our amazing tourists say about their experiences.
         </p>
       </div>
-      <Swiper
+      <Swiper data-aos = "fade-right"
         pagination={{
           type: "fraction",
         }}

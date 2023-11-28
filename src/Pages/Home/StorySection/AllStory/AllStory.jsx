@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { FacebookShareButton } from 'react-share';
 import { Link } from 'react-router-dom';
 import { FaFacebook } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 
 const AllStory = () => {
   const [stories, setStories] = useState([]);
@@ -14,6 +15,9 @@ const AllStory = () => {
 
   return (
     <div className="container mx-auto my-10">
+      <Helmet>
+        <title>User Stories</title>
+      </Helmet>
       <h2 className="text-3xl font-bold mb-6">User Stories</h2>
       {stories.map((story) => (
         <div key={story.id} className="mb-8">

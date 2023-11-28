@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useBookings from "../../../Hooks/useBookings";
+import { Helmet } from "react-helmet-async";
 
 const MyBookings = () => {
   const [bookings, refetch] = useBookings();
@@ -13,6 +14,9 @@ const MyBookings = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>My Bookings</title>
+      </Helmet>
       <h2 className="text-2xl font-bold mb-4">My Bookings</h2>
       <div className="overflow-x-auto">
         <table className="table-auto w-full border border-gray-300">

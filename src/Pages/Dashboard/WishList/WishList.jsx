@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import useWishList from "../../../Hooks/useWishList";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const WishList = () => {
   const [wishlist, refetch] = useWishList();
@@ -23,6 +24,9 @@ const WishList = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Wishlist</title>
+      </Helmet>
       {wishlist.length === 0 ? (
         <h2 className="text-center text-3xl font-bold mt-8">
           No wishlist found

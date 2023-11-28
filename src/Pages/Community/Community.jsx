@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet-async";
 
 const Community = () => {
   return (
     <div className="container mx-auto py-8">
+        <Helmet>
+        <title>Community | TRAVOL</title>
+        </Helmet>
       <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
       <p className="text-gray-600 mb-6">
         Explore the beauty of Bangladesh and beyond with our expert tour guides. Join our diverse community of travel enthusiasts for a memorable and immersive experience.

@@ -3,19 +3,19 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const UserHome = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
- const axiosSecure = useAxiosSecure();
+  const axiosSecure = useAxiosSecure();
   const { register, handleSubmit, reset } = useForm();
-  const [rating, setRating] = useState(0); 
+  const [rating, setRating] = useState(0);
   const [review, setReview] = useState("");
-  const [date, setDate] = useState(new Date().toISOString()); 
+  const [date, setDate] = useState(new Date().toISOString());
   const [tourType, setTourType] = useState("");
 
   const onSubmit = (data) => {
-
     data = {
       ...data,
       rating,
@@ -28,7 +28,6 @@ const UserHome = () => {
     };
     axiosSecure.post("/review", data);
 
-
     console.log(data);
     reset();
     setRating(0);
@@ -40,6 +39,9 @@ const UserHome = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>User Home</title>
+      </Helmet>
       <div className="flex items-center mb-4">
         {user && user.photoURL && (
           <img

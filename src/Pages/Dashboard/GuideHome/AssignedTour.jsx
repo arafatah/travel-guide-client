@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import useAssignedTour from "../../../Hooks/useAssignedTour";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
@@ -32,6 +33,9 @@ const AssignedTour = () => {
 
   return (
     <div>
+        <Helmet>
+        <title>Assigned Tours</title>
+        </Helmet>
       <h2 className="text-2xl font-bold mb-4">Assigned Tours</h2>
       <table className="min-w-full border border-gray-300">
         <thead>

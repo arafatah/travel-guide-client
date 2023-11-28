@@ -1,8 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const AboutUs = () => {
   return (
     <div className="container mx-auto py-8 mb-96">
+        <Helmet>
+        <title>About Us | TRAVOL</title>
+        </Helmet>
       <h2 className="text-3xl font-bold mb-4">About Us</h2>
       <p className="text-gray-600">
         Welcome to TRAVOL, your go-to platform for unforgettable travel experiences. At TRAVOL, we are passionate about connecting travelers with expert tour guides to create memorable journeys.

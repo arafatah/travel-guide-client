@@ -4,6 +4,7 @@ import useAuth from "../../Hooks/useAuth";
 import { imageUpload } from "../../api/utils";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { createUser, updateUserProfile, signInWithGoogle } = useAuth();
@@ -21,7 +22,7 @@ const Register = () => {
         showConfirmButton: false,
         timer: 1500,
       });
-      
+
       const userInfo = {
         name: result?.user?.displayName,
         email: result?.user?.email,
@@ -82,6 +83,9 @@ const Register = () => {
   };
   return (
     <div className="flex justify-center items-center min-h-screen">
+      <Helmet>
+        <title>Register | TRAVOL</title>
+      </Helmet>
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Sign Up</h1>

@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const ManageUser = () => {
   const axiosSecure = useAxiosSecure();
@@ -49,6 +50,9 @@ const ManageUser = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Manage Users</title>
+      </Helmet>
       <h2 className="text-2xl font-bold mb-4">Manage Users</h2>
       <table className="min-w-full border border-gray-300">
         <thead>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { imageUpload } from '../../../api/utils';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const AddPackage = () => {
   const axiosSecure = useAxiosSecure();
@@ -71,6 +72,9 @@ const AddPackage = () => {
 
   return (
     <div className="max-w-xl mx-auto mt-8 p-8 bg-white shadow-md rounded-md">
+      <Helmet>
+        <title>Add Package | TRAVOL</title>
+      </Helmet>
       <h2 className="text-2xl font-bold mb-6">Add Package</h2>
       <form onSubmit={handleFormSubmit} className="grid grid-cols-2 gap-4">
         {/* Image */}

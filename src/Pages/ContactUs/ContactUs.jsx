@@ -1,8 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const ContactUs = () => {
   return (
     <div className="container mx-auto py-8">
+        <Helmet>
+        <title>Contact Us | TRAVOL</title>
+        </Helmet>
       <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
       
       {/* Contact info */}

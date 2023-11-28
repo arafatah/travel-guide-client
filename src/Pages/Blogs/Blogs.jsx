@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Blogs = () => {
   const blogPosts = [
@@ -54,6 +55,9 @@ const Blogs = () => {
 
   return (
     <div className="container mx-auto py-8">
+        <Helmet>
+            <title>Blogs | TRAVOL</title>
+        </Helmet>
       <h2 className="text-3xl font-bold mb-4">Explore Our Blogs</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogPosts.map((post, index) => (
