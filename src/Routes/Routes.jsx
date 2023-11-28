@@ -24,6 +24,8 @@ import GuideHome from "../Pages/Dashboard/GuideHome/GuideHome";
 import AssignedTour from "../Pages/Dashboard/GuideHome/AssignedTour";
 import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
 import ManageUser from "../Pages/Dashboard/AdminHome/ManageUser";
+import AdminRoute from "./AdminRoute";
+import AddPackage from "../Pages/Dashboard/AdminHome/AddPackage";
 
 const Routes = createBrowserRouter([
   {
@@ -126,13 +128,18 @@ const Routes = createBrowserRouter([
       // Admin Routes
       {
         path: "adminHome",
-        element: <AdminHome/>
+        element: <AdminRoute><AdminHome/></AdminRoute>
       },
       {
         path: "manageUser",
         element: <ManageUser/>
-      }
+      },
+      {
+        path: "addPackage",
+        element: <AdminRoute><AddPackage /></AdminRoute>,
       
+      }
+
     ],
   },
   {

@@ -2,8 +2,13 @@ import { Link, NavLink } from "react-router-dom";
 import Container from "../Container";
 import useAuth from "../../../Hooks/useAuth";
 import { useState } from "react";
+import useAdmin from "../../../Hooks/useAdmin";
+import useIsTourGuide from "../../../Hooks/useIsTourGuide";
 
 const Navbar = () => {
+  const [isAdmin] = useAdmin();
+  const [isTourGuide] = useIsTourGuide();
+
   const { user, logOut } = useAuth();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const toggleDropdown = () => {
@@ -90,7 +95,13 @@ const Navbar = () => {
                       </div>
                       <hr className="my-2" />
                       <Link
-                        to="/dashboard/wishlist"
+                        to={
+                          isAdmin
+                            ? "/dashboard/adminHome"
+                            : isTourGuide
+                            ? "/dashboard/guideProfile"
+                            : "/dashboard/userHome"
+                        }
                         onClick={toggleDropdown}
                         className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
