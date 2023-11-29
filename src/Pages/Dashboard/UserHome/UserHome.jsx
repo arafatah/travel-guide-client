@@ -38,12 +38,11 @@ const UserHome = () => {
   };
 
   return (
-    <div>
+    <div className="container mx-auto p-4">
       <Helmet>
         <title>User Home</title>
       </Helmet>
       <div className="flex items-center mb-4">
-        
         {user && user.photoURL && (
           <img
             src={user.photoURL}
@@ -56,8 +55,9 @@ const UserHome = () => {
         </h2>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-      <h3>Fill this form to share you experience</h3>
+      <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
+        <h3 className="text-lg font-semibold mb-4">Share Your Experience</h3>
+        
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700">
             Rating out of 5

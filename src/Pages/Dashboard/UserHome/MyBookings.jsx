@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useBookings from "../../../Hooks/useBookings";
 import { Helmet } from "react-helmet-async";
-import Confetti from 'react-confetti'
+import Confetti from "react-confetti";
 
 const MyBookings = () => {
   const [bookings, refetch] = useBookings();
@@ -113,20 +113,26 @@ const MyBookings = () => {
             Congratulations! You've got a discount.
           </p>
           <Confetti
-  width={2000}
-  height={1025}
-  tweenDuration={1}
-  recycle={true}
-  numberOfPieces={500}
-  initialVelocityX={82}
-  initialVelocityY={50}
-  gravity={0.1}
-  tweenFunction={(currentTime, currentValue, targetValue, duration) => {
-    return (targetValue - currentValue) * (currentTime / duration) + currentValue;
-  }}
-
-  
-/>
+            width={2000}
+            height={1025}
+            tweenDuration={1}
+            recycle={true}
+            numberOfPieces={500}
+            initialVelocityX={82}
+            initialVelocityY={50}
+            gravity={0.1}
+            tweenFunction={(
+              currentTime,
+              currentValue,
+              targetValue,
+              duration
+            ) => {
+              return (
+                (targetValue - currentValue) * (currentTime / duration) +
+                currentValue
+              );
+            }}
+          />
 
           <button
             className="text-sm text-green-500 btn btn-sm px-4"

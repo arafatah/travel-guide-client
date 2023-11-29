@@ -2,20 +2,21 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Container from "../../../Components/Shared/Container";
 import Aos from "aos";
-import 'aos/dist/aos.css'
+import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Banner = () => {
-  useEffect(()=>{
-    Aos.init({duration:2000})
-
-},[])
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div>
       <Container>
-        <div data-aos = "fade-left"
- style={{ maxWidth: "1500px", margin: "auto" }}>
-          <Carousel showArrows={true} autoPlay={true} infiniteLoop={true}	 >
+        <div
+          data-aos="fade-left"
+          style={{ maxWidth: "1500px", margin: "auto" }}
+        >
+          <Carousel showArrows={true} autoPlay={true} infiniteLoop={true}>
             <div>
               <img
                 className="object-cover"

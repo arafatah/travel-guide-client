@@ -26,6 +26,7 @@ import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
 import ManageUser from "../Pages/Dashboard/AdminHome/ManageUser";
 import AdminRoute from "./AdminRoute";
 import AddPackage from "../Pages/Dashboard/AdminHome/AddPackage";
+import OfferAnnouncement from "../Pages/OfferAnouncement/OfferAnnouncement";
 
 const Routes = createBrowserRouter([
   {
@@ -83,6 +84,10 @@ const Routes = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`https://tour-guide-server-omega.vercel.app/tourGuide/${params.id}`),
       },
+      {
+        path: "/offer-announcements",
+        element: <OfferAnnouncement/>
+      }
     ],
   },
   {

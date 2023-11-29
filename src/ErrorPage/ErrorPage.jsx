@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-
+import Lottie from "lottie-react";
+import Animation from "../../public/Error-Animation.json";
 
 const ErrorPage = () => {
   return (
@@ -8,11 +9,13 @@ const ErrorPage = () => {
       
       <div className="container mx-auto h-screen flex flex-col justify-center items-center">
         
-        <img
-          src="https://i.ibb.co/C051gJT/Pngtree-error-404-page-not-found-6501259.png"
-          alt="Error Illustration"
-          className="w-96 h-96 mb-8"
+        <div>
+        <Lottie
+          animationData={Animation}
+          loop={true}
+          className="w-full h-auto pl-14"
         />
+        </div>
         <Link to="/" className="flex items-center mt-6">
           <FaHome className="text-xl mr-2" />
           Back to Home

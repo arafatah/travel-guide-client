@@ -56,7 +56,7 @@ const WishList = () => {
                   </td>
                   <td className="py-2 px-4 border-b">{item.title}</td>
                   <td className="py-2 px-4 border-b">{item.type}</td>
-                  <td className="py-2 px-4 border-b">{item.price}</td>
+                  <td className="py-2 px-4 border-b">${item.price}</td>
                   <td className="py-2 px-4 border-b">
                     <button
                       onClick={() => handleDelete(item._id)}

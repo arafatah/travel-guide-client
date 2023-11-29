@@ -4,6 +4,7 @@ import TourTypes from "../TourTypes/TourTypes";
 import Banner from "./Banner/Banner";
 import StorySection from "./StorySection/StorySection";
 import SubscribeSection from "../SubscribeSection/SubscribeSection";
+import AnimatedSection from "./AnimatedSection";
 
 const Home = () => {
   return (
@@ -19,11 +20,15 @@ const Home = () => {
         <TourTypes />
       </div>
       <div>
+        <AnimatedSection/>
+      </div>
+      <div>
         <StorySection />
       </div>
       <div>
         <SubscribeSection/>
       </div>
+
     </div>
   );
 };
