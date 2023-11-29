@@ -5,7 +5,7 @@ import Container from "../../Components/Shared/Container";
 const AllPackages = () => {
   const [packages, setPackages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/packages")
+    fetch("https://tour-guide-server-omega.vercel.app/packages")
       .then((res) => res.json())
       .then((data) => setPackages(data));
   }, []);

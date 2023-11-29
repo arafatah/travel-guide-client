@@ -43,6 +43,7 @@ const UserHome = () => {
         <title>User Home</title>
       </Helmet>
       <div className="flex items-center mb-4">
+        
         {user && user.photoURL && (
           <img
             src={user.photoURL}
@@ -56,9 +57,10 @@ const UserHome = () => {
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
+      <h3>Fill this form to share you experience</h3>
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700">
-            Rating
+            Rating out of 5
           </label>
           <input
             {...register("rating", { required: "Rating is required" })}

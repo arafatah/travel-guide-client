@@ -56,6 +56,7 @@ const Register = () => {
     // console.log(imageData.data.display_url);
 
     createUser(email, password).then((result) => {
+      
       console.log(result.user);
       updateUserProfile(name, imageData?.data?.display_url);
       const userInfo = {
@@ -80,6 +81,14 @@ const Register = () => {
         })
         .catch((err) => console.log(err));
     });
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Successfully Registered",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    navigate("/");
   };
   return (
     <div className="flex justify-center items-center min-h-screen">

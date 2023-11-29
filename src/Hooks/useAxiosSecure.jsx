@@ -2,7 +2,7 @@ import axios from "axios";
 import useAuth from "./useAuth";
 
 export const axiosSecure = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://tour-guide-server-omega.vercel.app",
 });
 
 const useAxiosSecure = () => {

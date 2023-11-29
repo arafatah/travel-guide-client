@@ -30,6 +30,11 @@ const Card = ({ pack }) => {
 
       console.log(wishlistItem);
     } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "User not logged in or package not found",
+      }); 
       console.log("User not logged in or package not found");
     }
   };

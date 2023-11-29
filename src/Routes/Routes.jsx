@@ -69,19 +69,19 @@ const Routes = createBrowserRouter([
         path: "/allStory/:id",
         element: <SingleStory />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/review/${params.id}`),
+          fetch(`https://tour-guide-server-omega.vercel.app/review/${params.id}`),
       },
       {
         path: "/package/:id",
         element: <SinglePackageDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/packages/${params.id}`),
+          fetch(`https://tour-guide-server-omega.vercel.app/packages/${params.id}`),
       },
       {
         path: "/tourGuide/:id",
         element: <TourGuideProfile />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/tourGuide/${params.id}`),
+          fetch(`https://tour-guide-server-omega.vercel.app/tourGuide/${params.id}`),
       },
     ],
   },
@@ -114,7 +114,7 @@ const Routes = createBrowserRouter([
         path: "wishlist/packageDetails/:id",
         element: <PrivetRoute><WishlistDetails /></PrivetRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/wishlist/new/${params.id}`),
+          fetch(`https://tour-guide-server-omega.vercel.app/wishlist/new/${params.id}`),
       },
       // Guide Routes
       {

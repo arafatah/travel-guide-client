@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const TourGuideTable = ({ guides }) => {
   return (
    <div className="overflow-x-auto">
-  <table className="table">
+  <table className="table overflow-x-auto">
     {/* head */}
     <thead>
       <tr className="bg-gray-200">

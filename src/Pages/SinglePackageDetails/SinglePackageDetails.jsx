@@ -21,7 +21,7 @@ const SinglePackageDetails = () => {
   const [tourGuide, setTourGuide] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/tourGuide")
+    fetch("https://tour-guide-server-omega.vercel.app/tourGuide")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -56,7 +56,7 @@ const SinglePackageDetails = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     axiosSecure
-      .post("http://localhost:5000/booking", formData)
+      .post("https://tour-guide-server-omega.vercel.app/booking", formData)
       .then((res) => {
         console.log(res);
         Swal.fire({

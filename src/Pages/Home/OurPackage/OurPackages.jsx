@@ -10,7 +10,7 @@ const OurPackages = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch("http://localhost:5000/packages")
+    fetch("https://tour-guide-server-omega.vercel.app/packages")
       .then((res) => res.json())
       .then((data) => setPackages(data));
   }, []);
@@ -42,6 +42,11 @@ const OurPackages = () => {
 
       console.log(wishlistItem);
     } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "User not logged in or package not found",
+      }); 
       console.log("User not logged in or package not found");
     }
   };

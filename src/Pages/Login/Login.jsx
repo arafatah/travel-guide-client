@@ -40,6 +40,14 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     signIn(email, password).then((result) => {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Successfully Logged In",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      
       navigate("/");
       console.log(result.user);
     });

@@ -7,7 +7,7 @@ const TourList = () => {
   const [tourData, setTourData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/packages")
+    fetch("https://tour-guide-server-omega.vercel.app/packages")
       .then((res) => res.json())
       .then((data) => setTourData(data));
   }, []);
